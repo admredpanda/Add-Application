@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<AppDetails>
+    <Name>Accounting Application</Name>
+    <Version>1.0</Version>
+    <Comment>Application for accounting</Comment>
+    <LocalizedName>Application</LocalizedName>
+    <Publisher>Corporate</Publisher>
+    <IconLocationFile>\\corpwscm1\SCCM_CORP\Applications\Application-v1.0\AppDeployToolkit\AppIcon.png</IconLocationFile>
+    <ContentLocation>\\corpwscm1\SCCM_CORP\Applications\Application-v1.0</ContentLocation>
+    <InstallCommand>Deploy-Application.exe -DeploymentType "Install" -DeployMode "Silent"</InstallCommand>
+    <UninstallCommand>Deploy-Application.exe -DeploymentType "Uninstall" -DeployMode "Silent"</UninstallCommand>
+    <InstallationBehaviorType>InstallForSystem</InstallationBehaviorType>
+    <DetectScript>if (Test-Path `"HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\MyProdct`"){ if ((Get-ItemProperty -Path `"HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\MyProduct`" -Name `"DisplayVersion`").DisplayVersion -eq `"$Version`") { Write-Host `"Installed`" } } exit 0</DetectScript>
+    <Folder>New-App</Folder>
+    <InstallationProgramVisibility>Hidden</InstallationProgramVisibility>
+    <LogonRequirementType>WhetherOrNotUserLoggedOn</LogonRequirementType>
+    <DistributionPriority>High</DistributionPriority>
+    <DistributionPointName>CORPWSCM1.CORP.PRIV</DistributionPointName>
+</AppDetails>

@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+			"[powershell]": {
+			"files.encoding": "windows1252"
+		}
+	}	
+}
